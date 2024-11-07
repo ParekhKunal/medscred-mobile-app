@@ -3,10 +3,18 @@
     "name": "medscred",
     "slug": "medscred",
     "version": "1.0.0",
+    "platforms": [
+      "android",
+      "ios"
+    ],
     "scheme": "medscred",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "build": {
+      "development": false,
+      "production": true
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -19,11 +27,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.kunal09.medscred"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-router"]
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ce8b83ca-f912-4f91-a4c0-d2da0fe2f5dc"
+      }
+    },
+    "owner": "kunal09"
   }
 }
