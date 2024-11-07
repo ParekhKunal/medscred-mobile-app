@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useAuth } from '../../context/AuthContext'; // Import Auth context
-import { useRouter } from 'expo-router'; // Import router to handle redirects
+import { useRouter, Link } from 'expo-router'; // Import router to handle redirects
+import HospitalForm from '../../components/HospitalForm/HospitalForm';
+import CustomBottomNavBar from '../../components/CustomBottomNavBar/CustomBottomNavBar';
+import HospitalList from '../../screens/hospitals/HospitalList';
+import Header from '../../components/Header/Header';
 
 export default function AdminDashboard() {
     const { user } = useAuth();
@@ -17,9 +21,32 @@ export default function AdminDashboard() {
         return null;  // Do not render if the user is not an admin
     }
 
+    const onHomePress = () => {
+        console.log('Home Pressed');
+    };
+
+    const onHospitalPress = () => {
+        console.log('Hospital Pressed');
+        router.push('/screens/hospitals/HospitalList')
+    };
+
+    const onPatientPress = () => {
+        console.log('Patient Pressed');
+    };
+
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Admin Dashboard</Text>
-        </View>
+        <>
+            <Header />
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <Text>Admin Dashboard {user.name}</Text>
+                <CustomBottomNavBar
+                    onHomePress={onHomePress}
+                    onHospitalPress={onHospitalPress}
+                    onPatientPress={onPatientPress}
+                    showAdminOptions={1}
+                />
+            </View>
+        </>
     );
 }
+

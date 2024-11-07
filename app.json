@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "medscred",
-    "slug": "medscred",
+    "name": "MedsCredHub",
+    "slug": "medscredhub",
     "version": "1.0.0",
     "platforms": [
       "android",
@@ -9,29 +9,24 @@
     ],
     "scheme": "medscred",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/medscred-icon.png",
     "userInterfaceStyle": "light",
     "build": {
       "development": false,
       "production": true
-    },
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/medscred-icon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.kunal09.medscred"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/medscred-icon.png"
     },
     "plugins": [
       "expo-router"

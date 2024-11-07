@@ -25,7 +25,7 @@ export default function LoginScreen() {
         setLoading(true);
 
         try {
-            const response = await fetch('https://4035-152-59-32-229.ngrok-free.app/api/v1/auth/login', {
+            const response = await fetch('https://api.medscred.com/api/v1/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password }),
